@@ -1,0 +1,149 @@
+.menu-icon {
+    position: fixed;
+    top: 30px;
+    left: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    color: rgb(112, 110, 110);
+    z-index: 999;
+}
+
+.color-hamb .menu-icon-line {
+    background-color: white;
+}
+
+.color-hamb {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white
+}
+
+.color-hamb a {
+    text-decoration: none;
+    color: black;
+}
+
+.color-hamb a:active,
+.color-hamb a:focus,
+.color-hamb a:hover {
+    color: rgb(255, 252, 252);
+}
+
+.menu-icon-line {
+    width: 35px;
+    height: 3px;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.menu.open .menu-icon-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu.open .menu-icon-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu.open .menu-icon-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(105, 65, 65, 0.6);
+    z-index: 999;
+    backdrop-filter: blur(20px);
+    transition: left 0.3s ease;
+    padding-top: 60px;
+}
+
+.menu.open {
+    left: 0;
+    width: 400px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    padding-left: 30px;
+}
+
+li {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: 2rem;
+    border-bottom: 1px solid #ccc;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.content::after {
+    content: "";
+    display: block;
+    width: 30px;
+    background-color: white;
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        font-size: 20px;
+    }
+
+    .menu.open {
+        width: 250px;
+    }
+
+    li {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .menu-icon {
+        font-size: 30px;
+        margin-left: -15px;
+    }
+
+    .menu.open {
+        left: 0;
+        width: 100%;
+        padding-top: 30px;
+    }
+
+    .menu-overlay {
+        display: none;
+    }
+
+    .menu.open .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 998;
+    }
+
+    li {
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
