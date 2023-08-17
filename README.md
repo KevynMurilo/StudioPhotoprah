@@ -1,6 +1,8 @@
 # Portfolio de Fotografia Studio - Componentes React
 
 Este projeto utiliza a biblioteca React e apresenta uma seleção de componentes usados para exibir os trabalhos do nosso estúdio de fotografia.
+![StudioPhotoprah](https://github.com/KevynMurilo/StudioPhotoprah/assets/132490286/bd8143be-1d1e-4da9-a7ba-f56fa5b4611b)
+
 
 ## Componentes Utilizados
 
